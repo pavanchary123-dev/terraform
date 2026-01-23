@@ -3,7 +3,7 @@ resource "aws_instance" "name" {
     instance_type = var.instance_type
     subnet_id = aws_subnet.name.id
     tags = {
-        Name="sample-1"
+        Name="sample-terra"
     }
   
 }
@@ -21,4 +21,7 @@ resource "aws_subnet" "name" {
   tags = {
     Name="new-sub"
   }
+}
+resource "aws_s3_bucket" "name" {
+  bucket = "ppppppwwwpppww"
 }
