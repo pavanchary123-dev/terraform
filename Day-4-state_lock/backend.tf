@@ -1,7 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "state_lock"
+    bucket = "state-lock-p"
     key = "terraform.tfstate"
-    region = "eu-north"
+    use_lockfile = true #it enables S3-state locking
+    region = "eu-north-1"
   }
 }
