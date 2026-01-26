@@ -1,7 +1,7 @@
 resource "aws_vpc" "name" {
   cidr_block = var.cidr_block
   tags = {
-    Name="vpc_statelock-linux"
+    Name="vpc_statelock-linux1"
   }
 }
 resource "aws_s3_bucket" "name" {
