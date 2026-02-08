@@ -24,7 +24,10 @@ resource "aws_s3_object" "lambda_zip_upload" {
   bucket = aws_s3_bucket.lambda_bucket.id
   key    = "lambda/lambda_code.zip"
   source = data.archive_file.lambda_zip.output_path
+# etag---> It helps Terraform detect changes correctly.
+  etag = filemd5(data.archive_file.lambda_zip.output_path)
 }
+
 
 ############################
 # IAM ROLE FOR LAMBDA
