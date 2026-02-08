@@ -14,7 +14,6 @@ resource "aws_db_instance" "name" {
     maintenance_window          = "sun:04:00-sun:05:00"
     skip_final_snapshot         = true
     deletion_protection         = false
-      
 }
 
 resource "aws_db_subnet_group" "name" {
