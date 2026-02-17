@@ -22,6 +22,7 @@ module "rds" {
   db_name        = var.db_name
   db_user        = var.db_user
   db_password    = var.db_password
+  
 }
 
 module "s3" {
