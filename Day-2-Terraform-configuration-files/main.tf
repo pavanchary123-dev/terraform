@@ -3,7 +3,7 @@ resource "aws_instance" "name" {
     instance_type = var.instance_type
     subnet_id = aws_subnet.name.id
     tags = {
-        Name="sample-1"
+        Name="sample"
     }
   
 }
